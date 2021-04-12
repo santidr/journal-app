@@ -17,6 +17,7 @@ import { login } from '../actions/auth'
 import { PrivateRoute } from './PrivateRoute'
 import { PublicRoute } from './PublicRoute'
 import { startLoadingNotes } from '../actions/notes'
+import { LoadingSpinner } from '../components/ui/LoadingSpinner'
 
 export const AppRouter = () => {
 
@@ -41,7 +42,7 @@ export const AppRouter = () => {
 
     if (checking) {
         return (
-            <h1>Loading...</h1>
+            <LoadingSpinner />
         )
     }
 
